@@ -1,0 +1,13 @@
+package ar.edu.unlu.zombi.modelo.serializacion;
+
+import java.io.Serializable;
+
+public class AdministradorSerializacion implements Serializable {
+	private static final long serialVersionUID = 1L;
+	private static Serializador partidaSerializada = new Serializador("partidaZombiGuardada.dat");
+	
+	public AdministradorSerializacion() {}
+	
+	public Boolean hayPartidaGuardada() {return false;}
+	
+}

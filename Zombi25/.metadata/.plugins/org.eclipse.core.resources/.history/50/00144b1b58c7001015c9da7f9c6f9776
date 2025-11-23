@@ -1,0 +1,8 @@
+package ar.edu.unlu.zombi.interfaces;
+
+import java.rmi.Remote;
+
+public interface IModelo extends Remote{
+	
+
+}

@@ -1,0 +1,9 @@
+package ar.edu.unlu.zombi.modelo;
+
+import java.io.Serializable;
+
+import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
+
+public class Modelo extends ObservableRemoto implements Serializable{
+
+}

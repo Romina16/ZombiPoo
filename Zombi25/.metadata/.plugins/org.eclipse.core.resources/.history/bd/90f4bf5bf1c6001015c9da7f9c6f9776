@@ -1,0 +1,5 @@
+package ar.edu.unlu.zombi.interfaces;
+
+public interface IPanel {
+
+}

@@ -1,0 +1,8 @@
+package ar.edu.unlu.zombi.vista.administradores;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class AdministradorVistaConsola {
+	private final Map<String, Object> panels = new LinkedHashMap<>();
+}

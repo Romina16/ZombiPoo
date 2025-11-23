@@ -1,0 +1,42 @@
+package ar.edu.unlu.zombi.controlador;
+
+import java.rmi.RemoteException;
+import java.util.UUID;
+
+import ar.edu.unlu.rmimvc.cliente.IControladorRemoto;
+import ar.edu.unlu.rmimvc.observer.IObservableRemoto;
+import ar.edu.unlu.zombi.interfaces.IControlador;
+import ar.edu.unlu.zombi.interfaces.IModelo;
+import ar.edu.unlu.zombi.interfaces.IVista;
+
+public class Controlador implements IControlador, IControladorRemoto{
+	private IModelo modelo;
+	private IVista vista;
+	private UUID jugadorAsignado;
+	
+	
+	@Override
+	public void actualizar(IObservableRemoto arg0, Object arg1) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <T extends IObservableRemoto> void setModeloRemoto(T arg0) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setVista(IVista vista) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void iniciarJuego() {
+		System.out.println("controlador iniciar juego");
+		vista.mostrarPanelMenuPrincipal();
+	}
+
+}

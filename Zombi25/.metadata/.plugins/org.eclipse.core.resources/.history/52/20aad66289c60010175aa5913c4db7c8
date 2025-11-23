@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module Zombi {
+	requires java.rmi;
+	requires LibreriaRMIMVC;
+}

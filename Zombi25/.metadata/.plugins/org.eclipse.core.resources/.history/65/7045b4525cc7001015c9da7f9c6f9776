@@ -1,0 +1,11 @@
+package ar.edu.unlu.zombi.interfaces;
+
+import java.util.List;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import ar.edu.unlu.zombi.modelo.entidades.*;
+
+public interface IModelo extends Remote{
+	List<Jugador> obtenerJugadores()throws RemoteException;
+
+}

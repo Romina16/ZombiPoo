@@ -1,0 +1,19 @@
+package ar.edu.unlu.zombi.modelo.serializacion;
+
+import java.io.File;
+import java.io.Serializable;
+
+public class Serializador implements Serializable{
+	private static final long serialVersionUID = 1L;
+	private String nombreArchivo;
+	
+	public Serializador(String nombreArchivo) {this.nombreArchivo = nombreArchivo;}
+	
+	public Boolean hayObjetoGuardado() {
+		File archivo = new File(this.nombreArchivo);
+		return archivo.exists();	
+	}
+	
+	
+	
+}

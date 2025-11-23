@@ -1,0 +1,6 @@
+package ar.edu.unlu.zombi.interfaces;
+
+public class IPanel {
+	void mostrarPanel();
+    void mostrarMensajeError(String mensaje);
+}
