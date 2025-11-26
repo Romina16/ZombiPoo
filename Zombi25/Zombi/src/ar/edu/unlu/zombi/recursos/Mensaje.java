@@ -13,6 +13,11 @@ public class Mensaje implements Serializable{
 		this.datos = Collections.unmodifiableMap(new HashMap<>(datos));
 	}
 	
+	public <T extends Serializable> T get(String key,Class<T> type) {
+		Serializable raw = datos.get(key);
+		return raw == null ? null : (T) type.cast(raw);
+	}
+	
 	public static class Builder{
 		private final Map<String, Serializable> datos = new HashMap<>();
 		
@@ -20,7 +25,9 @@ public class Mensaje implements Serializable{
 			datos.put(clave, valor);
 			return this;
 		}
+		
+		public Mensaje build() {return new Mensaje(datos);}
 	}
 	
-	public Mensaje build() {return new Mensaje(datos);}
+	
 }

@@ -1,38 +1,36 @@
 package ar.edu.unlu.zombi.modelo.entidades;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.UUID;
 
-public class Jugador {
-	//private UUID id;
+public class Jugador implements Serializable{
+	private static final long serialVersionUID = 1L;
+	private UUID id;
     private String nombre;
     private List<Carta> mano;
     private Boolean esActivo;
 
     public Jugador(String nombre) {
-        //this.id = UUID.randomUUID();
+        this.id = UUID.randomUUID();
         this.nombre = nombre;
         this.mano = new ArrayList<Carta>();
         this.esActivo = true;
     }
 
-    public String getNombre() {
-        return this.nombre;
-    }
+    public String getNombre() { return this.nombre;}
 
-    public List<Carta> getMazo() {
-        return this.mano;
-    }
+    public List<Carta> getMazo() {return this.mano;}
 
-    public Boolean getEsActivo() {
-        return this.esActivo;
-    }
+    public Boolean getEsActivo() {return this.esActivo;}
+    
+    public UUID getID() {return this.id;}
 
-    public void setEsActivo(Boolean esActivo) {
-        this.esActivo = esActivo;
-    }
+    public void setEsActivo(Boolean esActivo) {this.esActivo = esActivo;}
+    
     //agregar carta
     public void agregarCarta(Carta carta) {
         this.mano.add(carta);
@@ -83,5 +81,12 @@ public class Jugador {
         mano.removeAll(parejas);
         //devuelvo las parejas que me descarte
         return parejas;
+    }
+    
+    //recibir sus cartas al inicio de la partida
+    public void recibirMano(List<Carta> cartas) {
+    	if(!cartas.isEmpty()) {
+    		this.mano.addAll(cartas);
+    	}
     }
 }

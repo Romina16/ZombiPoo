@@ -74,7 +74,6 @@ public class PanelMenuPrincipal extends JPanel implements IPanel {
 
 	    @Override
 	    public void mostrarPanel() {
-	        System.out.println("mostrarPanel");
 	        obtenerDatosPanel();
 	        inicializarAccionEnter();
 	        obtenerPanel();

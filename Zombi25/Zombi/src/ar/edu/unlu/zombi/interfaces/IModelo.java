@@ -27,10 +27,11 @@ public interface IModelo extends Remote{
 	Mensaje tomarCartaJugadorDerecha(int indiceCartaJugadorDerecha) throws RemoteException;
 	String obtenerNombreJugadorPerdedor() throws RemoteException;
 	Mensaje finalizarJuego()  throws RemoteException;
+	//SERIALIZACION
 	Boolean hayPartidaPersistida() throws RemoteException;
 	void persistirPartida() throws RemoteException;
 	Mensaje continuarPartidaPersistida() throws RemoteException;
-	//
+	List<Jugador> obtenerJugadoresPartidaPersistida() throws RemoteException;
 	Mensaje reasignarJugadoresPartidaPersistida(UUID id) throws RemoteException;
 	
 }

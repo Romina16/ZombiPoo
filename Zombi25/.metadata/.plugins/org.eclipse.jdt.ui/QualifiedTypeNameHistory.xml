@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ar.edu.unlu.zombi.recursos.Mensaje"/>
+    <fullyQualifiedTypeName name="ar.edu.unlu.zombi.modelo.DTO.CartaDTO"/>
+    <fullyQualifiedTypeName name="ar.edu.unlu.zombi.recursos.Mensaje.Builder"/>
+    <fullyQualifiedTypeName name="ar.edu.unlu.zombi.modelo.enumerados.EventoJugador"/>
+    <fullyQualifiedTypeName name="ar.edu.unlu.zombi.modelo.enumerados.EventoGeneral"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>
